@@ -75,5 +75,28 @@ minikube service <service-name> --url
 minikube dashboard
 minikube addons list
 minikube start --driver=<driver-name>
+minikube stop
+minikube start
 ```
 
+## Install Ingress controller
+
+```bash
+minikube service <service-name> --url
+minikube dashboard
+minikube addons list
+minikube start --driver=<driver-name>
+minikube addons disable dashboard
+minikube addons enable dashboard
+```
+
+## Get 
+```bash
+kubectl get all -n kubernetes-dashboard
+
+```
+
+
+```bash
+k apply -f dashboard/ingress.yaml
+```
