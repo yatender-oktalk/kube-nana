@@ -443,7 +443,7 @@ kubectl get all --all-namespaces
 
 - [Kubernetes Basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
 - [Play with Kubernetes](https://labs.play-with-k8s.com/)
-- [Katacoda Kubernetes](https://www.katacoda.com/courses/kubernetes)
+- [Killercoda Kubernetes](https://killercoda.com/kubernetes) - Interactive scenarios
 
 ---
 

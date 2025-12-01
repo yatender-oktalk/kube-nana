@@ -21,6 +21,7 @@ A comprehensive guide to essential Kubernetes commands for managing pods, deploy
 - [Troubleshooting](#troubleshooting)
 - [Minikube Specific](#minikube-specific)
 - [Install Ingress Controller](#install-ingress-controller)
+- [Kubernetes Dashboard](#kubernetes-dashboard)
 
 ---
 
@@ -499,17 +500,24 @@ kubectl describe ingress <ingress-name>
 # Apply ingress configuration
 kubectl apply -f <ingress.yaml>
 
-# Get all resources in kubernetes-dashboard namespace
-kubectl get all -n kubernetes-dashboard
+# Apply dashboard ingress
+kubectl apply -f dashboard/ingress.yaml
+```
 
+## Kubernetes Dashboard
+
+```bash
 # Enable dashboard addon
 minikube addons enable dashboard
 
 # Disable dashboard addon
 minikube addons disable dashboard
 
-# Apply dashboard ingress
-kubectl apply -f dashboard/ingress.yaml
+# Get all resources in kubernetes-dashboard namespace
+kubectl get all -n kubernetes-dashboard
+
+# Open dashboard in browser
+minikube dashboard
 ```
 
 ## Quick Reference
@@ -553,5 +561,5 @@ alias kd='kubectl describe'
 alias kl='kubectl logs'
 alias ke='kubectl exec -it'
 alias ka='kubectl apply -f'
-alias kd='kubectl delete -f'
+alias kdel='kubectl delete -f'
 ```
